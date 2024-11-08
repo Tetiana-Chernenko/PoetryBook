@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="description" content="Круговорот событий. Сборник стихов и поэтических мыслей."> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="icon" href="img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <script defer src="js/loadBooks.js"></script> <!-- Подключение скрипта для загрузки контента -->
+
+    <title>PoetryBook &mdash; Круговорот событий</title>
+</head>
+
+<body>
+
+    <!-- MOBILE NAVIGATION -->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#about" class="navigation__link">О книге</a></li>
+                <li class="navigation__item"><a href="#footer" class="navigation__link">Контакты</a></li>
+                <li class="navigation__item"><a href="#chapters" class="navigation__link">Содержание</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- END MOBILE NAVIGATION -->
+
+    <header class="header">
+        <a href="#"><img class="logo" src="img/poetrybook-logo.png" alt="PoetryBook logo"></a>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a class="main-nav-link" href="#about">О книге</a></li>
+                <li><a class="main-nav-link" href="#footer">Контакты</a></li>
+                <li><a class="main-nav-link nav-cta" href="#chapters">Содержание</a></li>
+            </ul>
+        </nav>
+
+        <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+
+    </header>
+
+    <section class="section-hero">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-text-box">
+                    <h1 class="heading-primary">Круговорот событий. Сборник стихов и поэтических мыслей.</h1>
+                    <p class="hero-description">Сборник насчитывает более 200 сочинений:
+                        <br>поздравительных стихов и поэтических мыслей.
+                        <br>aвтор: Черненко Любовь Владимировна
+                    </p>
+                    <a class="btn btn--full margin-right-sm" href="#chapters">Читать сейчас</a>
+                    <a class="btn btn--outline" href="kruhovorotsobytii.pdf"
+                        onclick="window.open(this.href,'_blank');return false;">Загрузить pdf &darr;</a>
+
+                    <div class="hero-social">
+                        <a href="https://www.instagram.com/lubovchernenko/"
+                            onclick="window.open(this.href,'_blank');return false;"><ion-icon class="hero-social-icon"
+                                name="logo-instagram"></ion-icon></a>
+                        <a href="https://www.facebook.com/profile.php?id=100040255012875"
+                            onclick="window.open(this.href,'_blank');return false;"><ion-icon class="hero-social-icon"
+                                name="logo-facebook"></ion-icon></a>
+                        <a href="https://wa.me/380968639634"
+                            onclick="window.open(this.href,'_blank');return false;"><ion-icon class="hero-social-icon"
+                                name="logo-whatsapp"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="composition">
+                    <img id="cover-book-1" src="img/cover-book-1.png" alt="Photo1"
+                        class="composition__photo composition__photo--p1">
+                    <img id="cover-book-2" src="img/cover-book-2.png" alt="Photo2"
+                        class="composition__photo composition__photo--p2">
+                </div>
+            </div>
+
+            <div class="hero-arrow">
+                <ion-icon class="hero-arrow-icon" name="chevron-down-outline">Arrow</ion-icon>
+            </div>
+
+            <button onclick="topFunction()" id="btn--pageup" title="Go to top">
+                <ion-icon class="arrow-pageup" name="chevron-up-outline">Arrow</ion-icon>
+            </button>
+
+        </div>
+    </section>
+
+    <div class="books" id="content-section">
+        <!-- Контент книг будет загружаться сюда -->
+    </div>
+
+
+    <footer id="footer" class="footer">
+        <div class="container">
+
+            <div class="footer-logo">
+                <img class="logo" src="img/poetrybook-logo.png" alt="PoetryBook logo">
+
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/lubovchernenko/"
+                        onclick="window.open(this.href,'_blank');return false;"><ion-icon class="footer-social-icon"
+                            name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.facebook.com/profile.php?id=100040255012875"
+                        onclick="window.open(this.href,'_blank');return false;"><ion-icon class="footer-social-icon"
+                            name="logo-facebook"></ion-icon></a>
+                    <a href="https://wa.me/380968639634"
+                        onclick="window.open(this.href,'_blank');return false;"><ion-icon class="footer-social-icon"
+                            name="logo-whatsapp"></ion-icon></a>
+                </div>
+            </div>
+
+            <p class="copyright">Copyright &copy; 2024 by Lubov Chernenko
+                <br>Все права защищены
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

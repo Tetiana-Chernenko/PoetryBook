@@ -1,0 +1,312 @@
+/* rem and em do NOT depend on html font-size in media queries! 
+Instead, 1rem = 1em = 16px */
+
+@media only screen and (min-width: 44em), only screen and (min-width: 125em) {
+  .navigation {
+    display: none;
+  }
+}
+
+/* *********************** */
+/* BELLOW 1344px (Smaller desktops) */
+/* *********************** */
+@media (max-width: 84em) {
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+  .hero-description {
+    font-size: 1.8rem;
+  }
+}
+
+/* *********************** */
+/* BELLOW 1200px (Landscape Tablets) */
+/* *********************** */
+@media (max-width: 75em) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+}
+
+/* *********************** */
+/* BELLOW 944px (Tablets) */
+/* *********************** */
+@media (max-width: 59em) {
+  .header {
+    padding: 0 4rem;
+  }
+  .main-nav-list {
+    gap: 2.4rem;
+  }
+  .heading-primary {
+    margin-bottom: 1.8rem;
+  }
+  .hero-description {
+    font-size: 1.6rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.6rem;
+    padding: 1.2rem 2.4rem;
+  }
+  .hero-social {
+    margin-top: 3.2rem;
+  }
+  .hero-img {
+    width: 100%;
+  }
+}
+
+/* *********************** */
+/* BELLOW 704px (Smaller Tablets) */
+/* *********************** */
+@media (max-width: 44em) {
+  .main-nav {
+    display: none;
+  }
+  .navigation {
+    display: block;
+  }
+  .section-hero {
+    min-height: 100vh;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-text-box {
+    text-align: center;
+  }
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    padding: 2.4rem 0 1.2rem 0;
+  }
+  .hero-description {
+    font-size: 1.8rem;
+  }
+  .hero-social {
+    justify-content: center;
+  }
+  .hero-social-icon {
+    padding: 0 3rem;
+  }
+  .hero-img-box {
+    text-align: center;
+  }
+  .hero-img {
+    width: 50%;
+    display: none;
+  }
+  .composition {
+    padding: 25rem 0;
+  }
+  .composition__photo {
+    width: 50%;
+  }
+  .composition__photo--p1 {
+    left: 4rem;
+    top: 2rem;
+  }
+  .composition__photo--p2 {
+    right: 4rem;
+    top: 8rem;
+  }
+  .section-book {
+    max-width: 45rem;
+    padding: 1.2rem;
+  }
+  .content {
+    height: 62rem;
+  }
+  .cover {
+    height: 62rem;
+  }
+  .cover__cover-book-2 {
+    height: 62rem;
+  }
+  .cover-book__book-2 {
+    margin: 26rem 0 0;
+  }
+  .cover-title {
+    font-size: 3.6rem;
+  }
+  .annotation {
+    font-size: 1.5rem;
+  }
+  .about-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .chapter-list {
+    font-size: 1.6rem;
+  }
+}
+
+/* *********************** */
+/* BELLOW 544px (Phones) */
+/* *********************** */
+@media (max-width: 34em) {
+  .navigation__button {
+    height: 5rem;
+    width: 5rem;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  .navigation__background {
+    height: 4rem;
+    width: 4rem;
+    top: 2rem;
+    right: 2rem;
+  }
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    height: 2px;
+  }
+  .navigation__icon {
+    margin-top: 2.5rem;
+  }
+
+  #btn--pageup {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  .header {
+    padding: 0 2.4rem;
+    height: 8rem;
+  }
+  .logo {
+    height: 3rem;
+  }
+  .hero {
+    padding: 0 2.4rem 1.6rem;
+  }
+  .composition {
+    padding: 20rem 0;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 1.2rem 1.2rem;
+  }
+  .section-book {
+    max-width: 40rem;
+  }
+  .content {
+    height: 60rem;
+  }
+  .cover {
+    height: 60rem;
+  }
+  .cover__cover-book-2 {
+    height: 60rem;
+    /* background-position: center; */
+  }
+  .cover-book__book-2 {
+    margin: 23rem 0 0;
+  }
+  .cover-title {
+    padding: 4.8rem 0 0 0;
+  }
+  .about {
+    padding: 3.2rem;
+  }
+  .annotation {
+    font-size: 1.5rem;
+    width: 16rem;
+  }
+  .grid {
+    padding: 0 2.4rem;
+  }
+  .grid--long {
+    row-gap: 0.7rem;
+  }
+  .heading-subheading {
+    padding: 2.4rem 2.4rem 0 2.4rem;
+  }
+  .heading-primary {
+    font-size: 3rem;
+  }
+  .heading-tertiary {
+    padding: 2.4rem 2.4rem 1.2rem 2.4rem;
+  }
+  footer {
+    padding: 3.2rem 3.2rem 3.2rem;
+  }
+  .footer-logo {
+    gap: 2.4rem;
+    flex-wrap: wrap;
+  }
+  .copyright {
+    font-size: 1.3rem;
+  }
+}
+
+/* *********************** */
+/* BELLOW 352px (Smaller Phones) */
+/* *********************** */
+@media (max-width: 22em) {
+  .logo {
+    height: 2.4rem;
+  }
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+  .section-hero {
+    min-height: 90vh;
+  }
+  .hero {
+    padding: 0 1.6rem 1.6rem;
+  }
+  .hero-description {
+    font-size: 1.6rem;
+  }
+  .about-book p {
+    font-size: 1.5rem;
+  }
+  .composition {
+    padding: 15rem 0;
+  }
+  .composition__photo {
+    width: 55%;
+  }
+  .composition__photo--p1 {
+    left: 2rem;
+    top: 2rem;
+  }
+  .composition__photo--p2 {
+    right: 3rem;
+    top: 8rem;
+  }
+  .margin-right-sm {
+    margin-right: 1.2rem !important;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.5rem;
+  }
+  .cover-descr {
+    font-size: 1.6rem;
+  }
+  .heading-secondary-top {
+    padding: 2.4rem;
+  }
+  .chapter-list {
+    line-height: 2;
+  }
+  .grid {
+    padding: 0 1.6rem;
+  }
+}
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

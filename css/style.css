@@ -1,0 +1,641 @@
+/* *********************** */
+/* HEADER */
+/* *********************** */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Because we want header to be sticky later */
+  height: 9rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+.logo {
+  height: 3.2rem;
+}
+
+#btn--pageup {
+  display: none;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 99;
+  height: 6rem;
+  width: 6rem;
+  border: none;
+  outline: none;
+  background-color: #e3cfd7;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#btn--pageup:hover {
+  background-color: #677979;
+}
+
+.arrow-pageup {
+  height: 4rem;
+  width: 4rem;
+}
+
+/* *********************** */
+/* NAVIGATION */
+/* *********************** */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: #555;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #a25f7a;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #8aa1a1;
+  color: #fff;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #677979;
+}
+
+/* *********************** */
+/* MOBILE */
+/* *********************** */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* *********************** */
+/* HERO SECTIONS */
+/* *********************** */
+
+.section-hero {
+  background-color: #ecdfe4;
+  padding: 4.8rem 0;
+  /* min-height: 95vh; */
+}
+
+.hero {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem 1.6rem;
+  display: grid;
+  gap: 3.1rem;
+  grid-template-columns: 1.1fr 1fr;
+  /* align-items: center; */
+}
+
+.hero-description {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  margin-bottom: 4.8rem;
+}
+
+.composition {
+  position: relative;
+  width: 100%;
+}
+
+.composition__photo {
+  width: 61%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 10;
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+
+.composition__photo--p1 {
+  left: 0;
+  top: 1rem;
+}
+
+.composition__photo--p2 {
+  right: 0;
+  top: 12rem;
+}
+
+.composition__photo:hover {
+  outline: 1.5rem solid #92566e;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
+/* .hero-img {
+  width: 80%;
+  border-radius: 9px;
+  box-shadow: 2rem 2.4rem 4.8rem 1rem rgb(0, 0, 0, 0.35);
+} */
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  margin-top: 4.8rem;
+}
+
+.hero-social-icon {
+  display: flex;
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #677979;
+  transition: all;
+
+  padding: 0 3rem 0 0;
+}
+
+.hero-social a:hover {
+  transform: scale(0.97);
+}
+
+.hero-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-arrow-icon {
+  height: 4rem;
+  width: 4rem;
+  color: rgb(85, 85, 85);
+
+  animation-duration: 0.7s;
+  animation-name: a;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes a {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+/* *********************** */
+/* COVER SECTIONS */
+/* *********************** */
+
+.cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/cover-cover.png);
+  /* background-size: contain; */
+  background-size: cover;
+  height: 65rem;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+}
+
+.cover__cover-book-2 {
+  background-image: linear-gradient(to right bottom,
+        rgba(103, 121, 121, 0.603),
+        rgba(162, 95, 122, 0.342)),
+      url(../img/cover-cover-book2.png);
+    background-size: cover;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+}
+
+.cover-author {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2.4rem 0;
+}
+.cover-author__book-2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.cover-book {
+  color: #f1f1de;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 9.6rem 0 0;
+}
+
+.cover-book__book-2 {
+  color: #f1f1de;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 33rem 0 0;
+}
+
+.cover-title {
+  font-family: "Playfair Display", serif;
+  color: #f1f1de;
+  text-shadow: 3px 2px #555;
+  font-size: 4.4rem;
+  text-align: center;
+  margin: 8rem 0 0.6rem 0;
+  /* padding: 9.6rem 0 0 0; */
+}
+
+.cover-title__book-2 {
+  background-color: rgba(103, 121, 121, 0.55);
+  font-family: "Playfair Display", serif;
+  color: #f1f1de;
+  text-shadow: 3px 2px #555;
+  font-size: 4.4rem;
+  text-align: center;
+  padding: 1rem 0 0 0;
+  margin-top: 6rem;
+  
+}
+
+.cover-descr {
+  color: #a25f7a;
+  text-shadow: 1px 1px #663c4d;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.cover-descr__book-2 {
+  background-color: rgba(103, 121, 121, 0.55);
+  padding: 1rem 0;
+  color: #333;
+  text-shadow: 1px 1px #663c4d;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.end {
+  font-family: "Playfair Display", serif;
+}
+
+/* *********************** */
+/* ABOUT SECTIONS */
+/* *********************** */
+
+.about {
+  padding: 4.8rem;
+}
+
+.annotation {
+  margin-bottom: 3.2rem;
+  margin-left: auto;
+  margin-right: 0;
+  font-size: 1.6rem;
+  width: 18rem;
+  font-style: italic;
+  color: #555;
+}
+
+.about-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-author img {
+  margin-bottom: 3.2rem;
+  width: 20rem;
+  height: auto;
+  border-radius: 9px;
+}
+
+.about-title {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.about-book p {
+  line-height: 2.4rem;
+}
+
+.calligraphic {
+  font-size: 4.8rem;
+}
+
+/* *********************** */
+/* CHAPTER SECTIONS */
+/* *********************** */
+
+.chapter-list {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 2.2;
+}
+
+.chapter-list:hover {
+  color: #9d677d;
+}
+
+.chapter1-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter1-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter2-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter2-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter3-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter3-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter4-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter4-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter5-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter5-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapte6-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter6-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter7-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter7-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter8-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter8-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter9-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter9-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter10-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter10-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter11-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter11-cover.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter12-cover {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(241, 241, 222, 0.75),
+      rgba(162, 95, 122, 0.75)
+    ),
+    url(../img/chapter12-cover.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter1-book-2 {
+  background-image: linear-gradient(to right bottom,
+        rgba(103, 121, 121, 0.5),
+        rgba(162, 95, 122, 0.5)),
+      url(../img/chapter1-book-2.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.chapter2-book-2 {
+  background-image: linear-gradient(to right bottom,
+        rgba(103, 121, 121, 0.5),
+        rgba(162, 95, 122, 0.5)),
+      url(../img/chapter2-book-2.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.chapter3-book-2 {
+  background-image: linear-gradient(to right bottom,
+      rgba(103, 121, 121, 0.5),
+      rgba(162, 95, 122, 0.5)),
+    url(../img/chapter3-book-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter4-book-2 {
+  background-image: linear-gradient(to right bottom,
+      rgba(103, 121, 121, 0.5),
+      rgba(162, 95, 122, 0.5)),
+    url(../img/chapter4-book-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter5-book-2 {
+  background-image: linear-gradient(to right bottom,
+      rgba(103, 121, 121, 0.5),
+      rgba(162, 95, 122, 0.5)),
+    url(../img/chapter5-book-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter6-book-2 {
+  background-image: linear-gradient(to right bottom,
+      rgba(103, 121, 121, 0.5),
+      rgba(162, 95, 122, 0.5)),
+    url(../img/chapter6-book-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chapter7-book-2 {
+  background-image: linear-gradient(to right bottom,
+      rgba(103, 121, 121, 0.5),
+      rgba(162, 95, 122, 0.5)),
+    url(../img/chapter7-book-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+/* *********************** */
+/* FOOTER SECTIONS */
+/* *********************** */
+
+footer {
+  padding: 6.4rem 3.2rem 3.2rem;
+  margin-top: 6.4rem;
+  border-top: 1px solid rgb(238, 238, 238);
+  background-color: #fffbfd;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4.8rem;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+}
+
+.footer-social a {
+  padding: 0 2rem;
+}
+
+.footer-social-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #677979;
+}
+
+.copyright {
+  margin-top: 2.4rem;
+  line-height: 1.6rem;
+  color: #767676;
+  text-align: center;
+}
